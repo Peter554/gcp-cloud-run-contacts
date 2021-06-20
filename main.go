@@ -44,7 +44,7 @@ func NewServer(db *sql.DB) *Server {
 
 	mux.HandleFunc("/msg", func(w http.ResponseWriter, r *http.Request) {
 		w.Header().Add("content-type", "text/plain")
-		w.Write([]byte("hello!"))
+		w.Write([]byte("hello!?"))
 	})
 
 	mux.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
